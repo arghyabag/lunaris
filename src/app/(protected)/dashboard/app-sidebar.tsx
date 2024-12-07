@@ -49,7 +49,7 @@ export default function AppSidebar() {
         <Sidebar collapsible="icon" variant="floating">
             <SidebarHeader>
                 <div className="flex items-center gap-2">
-                    <Image src='/logo.png' alt='logo' width={50} height={50} />
+                    <Image src='/logo-2.png' alt='logo' width={50} height={50} />
                     {open &&(
                         <h1 className="text-x1 font-bold text-primary/80">
                             Lunaris
@@ -96,7 +96,7 @@ export default function AppSidebar() {
                                                 <div className={cn(
                                                     'rounded-sm border size-6 flex items-center justify-center text-sm bg-white text-primary',
                                                     {
-                                                        'bg-primary text-white':false
+                                                        'bg-primary text-white':true
                                                     }
                                                 )}>
                                                     {project.name[0]}
