@@ -49,10 +49,10 @@ export default function AppSidebar() {
         <Sidebar collapsible="icon" variant="floating">
             <SidebarHeader>
                 <div className="flex items-center gap-2">
-                    <Image src='/logo-2.png' alt='logo' width={50} height={50} />
+                    <Image src='/logo-5.png' alt='logo' width={50} height={50} />
                     {open &&(
-                        <h1 className="text-x1 font-bold text-primary/80">
-                            Lunaris
+                        <h1 className="text-lg font-bold text-primary/80">
+                            LUNARIS
                         </h1>
                     )
                     }

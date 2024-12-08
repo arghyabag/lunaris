@@ -1,30 +1,30 @@
-import { SidebarProvider } from "@/components/ui/sidebar"
-import { UserButton } from "@clerk/nextjs"
-import App from "next/app"
-import AppSidebar from "./dashboard/app-sidebar"
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { UserButton } from "@clerk/nextjs";
+import AppSidebar from "./dashboard/app-sidebar";
 
+type Props = {
+    children: React.ReactNode;
+};
 
-type Props={
-    children: React.ReactNode
-}
-
-const SidebarLayout =({children}:Props)=>{
+const SidebarLayout = ({ children }: Props) => {
     return (
         <SidebarProvider>
-            <AppSidebar/>
+            <AppSidebar />
             <main className="w-full m-2">
-                <div className="flex items-center gap-2 border-sidebar-border bg-sidebar border shadow rounded-md p-2 px-4">
+                <div className="flex items-center gap-2 h-16 border-sidebar-border bg-sidebar border shadow rounded-md p-2 px-4">
                     <div className="ml-auto"></div>
-                        <UserButton/>
+                    {/* Increased UserButton size */}
+                    <div className="scale-125">
+                        <UserButton />
+                    </div>
                 </div>
                 <div className="h-4"></div>
-                {/*main content */}
-                <div className='border-sidebar-border bg-sidebar border shadow rounded-md overflow-y-scroll h-[calc(100vh-6rem)] p-4'>
+                <div className="border-sidebar-border bg-sidebar border shadow rounded-md overflow-y-scroll h-[calc(100vh-6rem)] p-4">
                     {children}
                 </div>
             </main>
         </SidebarProvider>
-    )
-}
+    );
+};
 
-export default SidebarLayout
+export default SidebarLayout;
